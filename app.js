@@ -1,5 +1,6 @@
 const createError = require('http-errors');
 const express = require('express');
+const helmet = require("helmet");
 const path = require('path');
 require('dotenv').config();
 
@@ -17,6 +18,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 const app = express();
+app.use(helmet());
 
 // Set up mongoose connection
 const mongoose = require('mongoose');
