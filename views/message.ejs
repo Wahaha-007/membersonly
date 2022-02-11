@@ -1,0 +1,62 @@
+<%- include('layout-top'); -%>
+
+<main class="message-main">
+  <div class="message-board">
+
+    <%if(message_list.length > 0) {%>
+    <%message_list.forEach(message=>{%>
+
+    <div class="card">
+      <div class="card-head">
+        <h4><strong><%=message.title%></strong></h4>
+
+        <%if (locals.user) {
+          if (user.status == 'Admin') {%>
+
+        <form action="<%=message.url+'/delete'%>" method="post">
+          <input type="hidden" id="messageid" name="messageid" value="<%=message._id%>" required>
+          <button type="submit"><span class="material-icons" style="font-size:24px">delete_forever</span></button>
+        </form>
+
+        <%}
+      }%>
+
+      </div>
+
+      <p><%=message.text%></p>
+
+      <div class="card-end">
+        <p><small>Date : <%=message.createdAt%></small></p>
+        <%if (locals.user) {
+                    if ((user.status == 'Admin') || (user.status == 'Member') || (user.username == message.owner.username)) {%>
+        <p><i>by : <%=message.owner.username%></i></p>
+        <%} else {%>
+        <p><i>by : Anonymous</i></p>
+        <%}
+                }else{%>
+        <p><i>by : Anonymous</i></p>
+        <%}%>
+            </div>
+        </div>
+
+        <%})
+        }
+        else {%>
+        <p>-- No message to display --</p>
+        <%}%>
+    </div>
+
+    <%if (locals.user) {%>
+        <form class="message-form" action="" method="POST">
+          <label for="title">Title :</label>
+          <input type="text" name="title" id="title" required>
+
+          <label for="text">Message :</label>
+          <textarea name="text" id="text" cols="30" rows="3" required></textarea>
+
+          <button>Submit</button>
+        </form>
+        <%}%>
+</main>
+
+<%- include('layout-end'); -%>

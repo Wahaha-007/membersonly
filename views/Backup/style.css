@@ -1,0 +1,115 @@
+body{
+
+  box-sizing: border-box;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #00B7FF;
+    text-decoration: none;
+}
+
+header {
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-rows: 30px 70px;
+    justify-items: center;
+    align-items: flex-start;
+    text-shadow: 2px 2px 4px gray;
+}
+
+.header-right {
+    display: grid;
+    grid-template-columns: repeat(5, 80px);
+    justify-self: right;
+}
+
+.message-main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 4px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    line-height: 60%;
+}
+
+.card h4,
+.card p {
+    margin: 16px 0;
+}
+
+.card .card-end {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    border: 1px solid black;
+    padding: 20px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-form {
+    border: 1px solid black;
+    padding: 20px 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 20px 30px 20px 100px 40px;
+    grid-gap: 10px;
+}
+
+.message-form textarea {
+    resize: none;
+}
+
+.login-form {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 6px -6px black;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: 20px 30px 20px 30px 40px;
+  grid-gap: 10px;
+}
+
+.signup-form {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 20px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 6px -6px black;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: repeat(5, 20px 30px) auto auto 20px 30px 40px;
+  grid-gap: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css' />
+    <title>Main Message Board</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-right">
+            <p><a href="">About</a></p>
+            <p><a href="">Log-in</a></p>
+            <p><a href="">Sign-up</a></p>
+            <p><a href="">Username</a></p>
+            <p><a href="">Sign-out</a></p>
+        </div>
+        <h1>Odin Message Board</h1>
+    </header>
+    <main class="message-main">
+        <div class="message-board">
+            <div class="card">
+                <h4><strong>Message Topic</strong></h4>
+                <p>Message Body</p>
+                <div class="card-end">
+                    <p><small>Date : 2022-10-08, 13:30</small></p>
+                    <p><small><i>by : Superman</i></small> </p>
+                </div>
+            </div>
+            <div class="card">
+                <h4><strong>Message Topic</strong></h4>
+                <p>Message Body</p>
+                <p><small>Date : 2022-10-08, 13:30 <span>by : </span></small></p>
+            </div>
+            <div class="card">
+                <h4><strong>Message Topic</strong></h4>
+                <p>Message Body</p>
+                <p>Date : 2022-10-08, 13:30 <span>by : </span></p>
+            </div>
+            <div class="card">
+                <h4><strong>Message Topic</strong></h4>
+                <p>Message Body</p>
+                <p>Date : 2022-10-08, 13:30 <span>by : Anonamous</span></p>
+            </div>
+        </div>
+
+        <form class="message-form" action="">
+            <label for="title">Title :</label>
+            <input type="text" name="title" id="title">
+
+            <label for="message">Message :</label>
+            <textarea name="message" id="message" cols="30" rows="3">Input your message here</textarea>
+
+            <button>Submit</button>
+        </form>
+
+    </main>
+
+    <footer>
+
+        <p>Copyright 2020 by Noman @ Odin Society</p>
+    </footer>
+</body>
+
+</html>

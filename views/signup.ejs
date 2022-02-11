@@ -1,0 +1,28 @@
+<%- include('layout-top'); -%>
+
+<main>
+  <form class="signup-form" action="" method="POST">
+    <label for="first_name">First Name :</label>
+    <input type="text" name="first_name" id="first_name" required>
+
+    <label for="last_name">Last Name :</label>
+    <input type="text" name="last_name" id="last_name" reqiured>
+
+    <label for="username">Username :</label>
+    <input type="text" name="username" id="username" required>
+
+    <label for="password">Password :</label>
+    <input type="password" name="password" id="password" required>
+
+    <label for="confirmPassword">Re-enter Password :</label>
+    <input type="password" name="confirmPassword" id="confirmPassword" required>
+    <span><small>* Password must be at least 6 characters</small></span>
+    <br><br>
+    <label for="refer">Reference Code :</label>
+    <input type="password" name="refer" id="refer" placeholder="Reference code here">
+
+    <button>Sign Up</button>
+  </form>
+</main>
+
+<%- include('layout-end'); -%>
